@@ -1,10 +1,12 @@
-function App() {
+import { FunctionComponent } from 'react';
+import PokemonList from './pages/pokemon-list';
 
+const App: FunctionComponent = () => {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <PokemonList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

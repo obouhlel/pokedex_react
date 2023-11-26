@@ -1,0 +1,59 @@
+.PkmnCard
+{
+	padding: 10px;
+	width: 500px;
+	height: auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #f2f2f2;
+	border-radius: 5px;
+	border: 3px solid #ccc;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-image
+{
+	width: 60%;
+	height: auto;
+	float: left;
+}
+
+.picture
+{
+	width: 100%;
+	height: auto;
+}
+
+.card-information
+{
+	margin-top: 10px;
+	background-color: transparent;
+}
+
+.name
+{
+	text-transform: uppercase;
+}
+
+.type
+{
+	display: inline-flex;
+	text-transform: uppercase;
+	text-align: center;
+	text-emphasis: none;
+	padding: 5px;
+	margin: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+
+.move
+{
+	padding: 5px;
+	margin: 5px;
+}

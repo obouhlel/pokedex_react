@@ -16,4 +16,6 @@ clean:
 	rm -rf $(DEPENDENCIES)
 	rm -rf package-lock.json
 
+re: clean all
+
 .PHONY: all clean
