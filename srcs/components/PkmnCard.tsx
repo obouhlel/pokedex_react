@@ -1,4 +1,5 @@
 import { FunctionComponent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Pokemon from '../models/pokemon.ts';
 import { formatDate } from '../helpers/format-date';
 import { formatType } from '../helpers/format-type';
@@ -12,6 +13,7 @@ type PokemonProps = {
 const PkmnCard: FunctionComponent<PokemonProps> = ({ pokemon, borderColor = '#ccc' }) => {
 
 	const [color, setColor] = useState<string>();
+	const navigate = useNavigate();
 
 	const showBorder = () => {
 		setColor('#000000');
@@ -21,8 +23,12 @@ const PkmnCard: FunctionComponent<PokemonProps> = ({ pokemon, borderColor = '#cc
 		setColor(borderColor);
 	}
 
+	const goToPokemon = (id: number) => {
+		navigate(`/pokemons/${id}`)
+	}
+
 	return (
-		<div className="PkmnCard" onMouseEnter={showBorder} onMouseLeave={hideBorder} style={{ borderColor: color }}>
+		<div className="PkmnCard" onClick={() => goToPokemon(pokemon.id)} onMouseEnter={showBorder} onMouseLeave={hideBorder} style={{ borderColor: color }}>
 			<div className="card-image">
 				<img src={pokemon.picture} alt={pokemon.name} className="picture" />
 			</div>
