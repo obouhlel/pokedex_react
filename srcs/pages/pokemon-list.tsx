@@ -1,7 +1,7 @@
 import { FunctionComponent, useState, useEffect } from 'react';
 import Pokemon from '../models/pokemon.ts';
 import Pokedex from '../models/pokedex.ts';
-import PkmnCard from '../props/PkmnCard.tsx';
+import PkmnCard from '../components/PkmnCard.tsx';
 
 const PokemonList: FunctionComponent = () => {
 	const [pokemons, setPokemons] = useState<Pokemon[]>([]);
