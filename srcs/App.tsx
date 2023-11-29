@@ -1,6 +1,7 @@
 import { FunctionComponent } from 'react';
 import PokemonList from './pages/pokemon-list';
 import PokemonDetail from './pages/pokemon-detail';
+import PageNotFound from './pages/page-not-found';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const App: FunctionComponent = () => {
@@ -16,6 +17,7 @@ const App: FunctionComponent = () => {
 					<Route path="/" element={<PokemonList />} />
 					<Route path="/pokemons" element={<PokemonList />} />
 					<Route path="/pokemons/:id" element={<PokemonDetail />} />
+					<Route path="*" element={<PageNotFound />} />
 				</Routes>
 			</div>
 		</Router>
